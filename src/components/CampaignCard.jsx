@@ -1,12 +1,12 @@
-import { useLoaderData } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const CampaignCard = () => {
-    const loadCampaigns = useLoaderData();
-    const { photo, campaign_title, campaign_type, description, amount, deadline, user_email, user_name } = loadCampaigns;
+const CampaignCard = ({campaign}) => {
+    
+    const { photo, campaign_title, campaign_type, description, amount, deadline } = campaign;
 
     return (
         <div>
-            <div className="card bg-white w-96 shadow-xl rounded-lg">
+            <div className="card bg-white  shadow-2xl rounded-lg mb-5">
                 <figure className="w-full h-48 p-4">
                     <img src={photo} alt={campaign_title} className="w-full h-full object-cover" />
                 </figure>
@@ -22,19 +22,13 @@ const CampaignCard = () => {
                             <span className="font-bold">Deadline:</span> {new Date(deadline).toLocaleDateString()}
                         </p>
                     </div>
-                    <hr className="my-4" />
-                    <div className="text-sm text-gray-500">
-                        <p>
-                            <span className="font-bold">Organizer:</span> {user_name}
-                        </p>
-                        <p>
-                            <span className="font-bold">Contact:</span> {user_email}
-                        </p>
-                    </div>
+                    
                     <div className="card-actions mt-6">
-                        <button className="btn btn-primary w-full text-white bg-blue-500 hover:bg-blue-600 rounded-md py-2 px-4">
-                            Donate Now
-                        </button>
+                        <Link to={`campaign-details/${campaign._id}`}>
+                            <button className="btn btn-primary w-full text-white bg-blue-500 hover:bg-blue-600 rounded-md py-2 px-4">
+                                See More
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
