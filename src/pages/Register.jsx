@@ -1,13 +1,13 @@
 
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { authContext } from "../provider/AuthProvider";
+import { AuthContext } from "../provider/AuthProvider";
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import logo from "../assets/google.png"
 
 const Register = () => {
-    const {handleRegister, manageProfile, handleGoogleLogin} = useContext(authContext);
+    const {handleRegister, manageProfile, handleGoogleLogin} = useContext(AuthContext);
     const [error, setError] = useState("");
     const navigate = useNavigate()
     const [showPassword, setShowPassword] = useState(false);

@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
-import { authContext } from "../provider/AuthProvider";
+import { AuthContext } from "../provider/AuthProvider";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/google.png"
 
 
 const Login = () => {
-    const {handleGoogleLogin, handleLogin, handleLogOut} = useContext(authContext);
+    const {handleGoogleLogin, handleLogin, handleLogOut} = useContext(AuthContext);
     const [error , setError] = useState("")
     const location = useLocation()
     const navigate = useNavigate()
@@ -56,7 +56,6 @@ const Login = () => {
                         <span className="label-text text-base">Password</span>
                     </label>
                     <input name="password" type="password" placeholder="password" autoComplete="off" className="input input-bordered" required />
-                    <NavLink to="/forget-password"><p onClick={handleForgotPassword} className="mt-4 text-orange-500 text-right">Forget Password</p></NavLink>
                     </div>
                     <div className="form-control mt-4">
                          <button type="submit" className="btn bg-[#3b6781] text-white font-bold">Login</button>

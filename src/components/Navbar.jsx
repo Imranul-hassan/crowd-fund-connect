@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { authContext } from "../provider/AuthProvider";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
-    const {user, handleLogOut} = useContext(authContext)
+    const {user, handleLogOut} = useContext(AuthContext)
   
     return (
-      <div className="navbar w-10/12 mx-auto text-white ">
+      <div className="navbar w-11/12 mx-auto text-white ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,19 +27,21 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-[#1D3557] rounded-box z-[1] mt-3 w-52 p-2 shadow">
               <NavLink to="/">Home</NavLink>
-              <NavLink to="/campaign">Donation Campaign</NavLink>
-              <NavLink to="/help">Hoe to Help</NavLink>
-              <NavLink to="/dashboard">Dashboard</NavLink>
+              <NavLink to="/all-campaign">All Campaign</NavLink>
+              <NavLink to="/add-new-campaign">Add New Campaign</NavLink>
+              <NavLink to="/my-campaign">My Campaign</NavLink>
+              <NavLink to="/my-donation">My Donation</NavLink>
             </ul>
           </div>
-          <NavLink to="/" className="btn btn-ghost text-xl pl-0">DONATION</NavLink>
+          <NavLink to="/" className="btn btn-ghost text-xl pl-0">CROWDFUNDING</NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-6 font-semibold text-base">
               <NavLink to="/">Home</NavLink>
-              <NavLink to="/campaign">Donation Campaign</NavLink>
-              <NavLink to="/help">How to Help</NavLink>
-              <NavLink to="/dashboard">Dashboard</NavLink>
+              <NavLink to="/all-campaign">All Campaign</NavLink>
+              <NavLink to="/add-new-campaign">Add New Campaign</NavLink>
+              <NavLink to="/my-campaign">My Campaign</NavLink>
+              <NavLink to="/my-donation">My Donation</NavLink>
           </ul>
         </div>
         <div className="navbar-end">

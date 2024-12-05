@@ -8,7 +8,7 @@ const HomeLayout = () => {
     return (
         <div>
              <ToastContainer />
-            <nav>
+            <nav className="bg-sky-700">
                 <Navbar></Navbar>
             </nav>
             <main className="min-h-[calc(100vh-240px)] w-10/12 mx-auto">
