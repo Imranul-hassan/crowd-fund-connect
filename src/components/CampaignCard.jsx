@@ -1,11 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 
-const CampaignDetails = () => {
-    const campaignDetails = useLoaderData();
-    const { photo, campaign_title, campaign_type, description, amount, deadline, user_email, user_name } = campaignDetails;
+const CampaignCard = () => {
+    const loadCampaigns = useLoaderData();
+    const { photo, campaign_title, campaign_type, description, amount, deadline, user_email, user_name } = loadCampaigns;
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <div>
             <div className="card bg-white w-96 shadow-xl rounded-lg">
                 <figure className="w-full h-48 p-4">
                     <img src={photo} alt={campaign_title} className="w-full h-full object-cover" />
@@ -42,4 +42,4 @@ const CampaignDetails = () => {
     );
 };
 
-export default CampaignDetails;
+export default CampaignCard;

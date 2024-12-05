@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { useState } from "react";
 
 const AllCampaign = () => {
@@ -17,6 +17,7 @@ const AllCampaign = () => {
                         <th>Donation Amount</th>
                         <th>User Email</th>
                         <th>User Name</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -30,6 +31,7 @@ const AllCampaign = () => {
                                 <td>{campaign.amount}</td>
                                 <td>{campaign.user_email}</td>
                                 <td>{campaign.user_name}</td>
+                                {/* <Link to={campaign_details/campaign._id}>See More</Link> */}
                             </tr>
                         )
                     }
