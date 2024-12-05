@@ -33,24 +33,27 @@ import CampaignDetails from "../pages/CampaignDetails";
         {
           path: 'add-new-campaign',
           element: <PrivateRoute>
-              <AddNewCampaign></AddNewCampaign>
-          </PrivateRoute>
+                      <AddNewCampaign></AddNewCampaign>
+                  </PrivateRoute>
         },
         {
           path: 'campaign-details/:id',
-          element: <CampaignDetails></CampaignDetails>,
+          element: <PrivateRoute>
+                       <CampaignDetails></CampaignDetails>
+                  </PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/campaign/${params.id}`)
         
         },
         {
-          path: 'my-campaign',
-          element: <MyCampaign></MyCampaign>
+          path: 'my-campaign/:user_email',
+          element: <MyCampaign></MyCampaign>,
+          loader: ({params}) => fetch(`http://localhost:5000/my-campaign/${params.user_email}`)
         },
         {
           path: 'my-donation',
           element:<PrivateRoute>
-              <MyDonation></MyDonation>
-          </PrivateRoute>
+                    <MyDonation></MyDonation>
+                 </PrivateRoute>
         },
         {
           path: '/login',

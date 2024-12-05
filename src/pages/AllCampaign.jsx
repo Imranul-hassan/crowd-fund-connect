@@ -9,29 +9,33 @@ const AllCampaign = () => {
         <div className="m-10">
             <div className="overflow-x-auto">
                 <table className="table">
-                    {/* head */}
+                  
                     <thead>
-                    <tr>
-                        <th>Campaign Title</th>
-                        <th>Campaign Type</th>
-                        <th>Donation Amount</th>
-                        <th>User Email</th>
-                        <th>User Name</th>
-                        <th></th>
-                    </tr>
+                        <tr className="bg-gray-200">
+                            <th className="border border-gray-300 px-4 py-2">Campaign Title</th>
+                            <th className="border border-gray-300 px-4 py-2">Campaign Type</th>
+                            <th className="border border-gray-300 px-4 py-2">Donation Amount</th>
+                            <th className="border border-gray-300 px-4 py-2">User Email</th>
+                            <th className="border border-gray-300 px-4 py-2">User Name</th>
+                            <th className="border border-gray-300 px-4 py-2">Action</th>
+                        </tr>
                     </thead>
+                    
                     <tbody>
-                   
                     {
                         campaigns.map(campaign =>
                             <tr key={campaign._id} >
                                 
-                                <td>{campaign.campaign_title}</td>
-                                <td>{campaign.campaign_type}</td>
-                                <td>{campaign.amount}</td>
-                                <td>{campaign.user_email}</td>
-                                <td>{campaign.user_name}</td>
-                                {/* <Link to={campaign_details/campaign._id}>See More</Link> */}
+                                <td className="border border-gray-300 px-4 py-2">{campaign.campaign_title}</td>
+                                <td className="border border-gray-300 px-4 py-2">{campaign.campaign_type}</td>
+                                <td className="border border-gray-300 px-4 py-2">{campaign.amount}</td>
+                                <td className="border border-gray-300 px-4 py-2">{campaign.user_email}</td>
+                                <td className="border border-gray-300 px-4 py-2">{campaign.user_name}</td>
+                                <td className="border border-gray-300 px-4 py-2">
+                                    <Link to={`/campaign-details/${campaign._id}`}>
+                                        <button className="btn btn-primary">See More</button>
+                                    </Link>
+                                </td>
                             </tr>
                         )
                     }

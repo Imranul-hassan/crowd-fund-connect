@@ -4,6 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
     const {user, handleLogOut} = useContext(AuthContext)
+    
   
     return (
       <div className="navbar w-11/12 mx-auto text-white ">
@@ -29,7 +30,7 @@ const Navbar = () => {
               <NavLink to="/">Home</NavLink>
               <NavLink to="/all-campaign">All Campaign</NavLink>
               <NavLink to="/add-new-campaign">Add New Campaign</NavLink>
-              <NavLink to="/my-campaign">My Campaign</NavLink>
+              <NavLink to={`/my-campaign`} >My Campaign</NavLink>
               <NavLink to="/my-donation">My Donation</NavLink>
             </ul>
           </div>
