@@ -1,10 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
+
 const MyCampaign = () => {
     const myCampaign = useLoaderData();
     const {user} = useContext(AuthContext)
+
+    const [campaigns, setCampaigns] = useState(myCampaign)
 
     const handleDelete= (_id) =>{
         console.log(_id)
@@ -30,7 +33,9 @@ const MyCampaign = () => {
                         title: "Deleted!",
                         text: "Your campaign has been deleted.",
                         icon: "success"
-                    });
+                    })
+                    const remaining = campaigns.filter((camp) => camp._id !== _id);
+                    setCampaigns(remaining);
                 }
               })
             }
@@ -53,7 +58,7 @@ const MyCampaign = () => {
                     </thead>
                     <tbody>
                         {
-                            myCampaign.map((campaign) => (
+                            campaigns.map((campaign) => (
                                 <tr key={campaign._id}>
                                     <td className="border border-gray-300 px-4 py-2">
                                         <img 
