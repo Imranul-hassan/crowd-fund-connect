@@ -4,8 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
     const {user, handleLogOut} = useContext(AuthContext)
-    
-  
+   
     return (
       <div className="navbar w-11/12 mx-auto text-white ">
         <div className="navbar-start">
@@ -30,7 +29,7 @@ const Navbar = () => {
               <NavLink to="/">Home</NavLink>
               <NavLink to="/all-campaign">All Campaign</NavLink>
               <NavLink to="/add-new-campaign">Add New Campaign</NavLink>
-              <NavLink to={`/my-campaign`} >My Campaign</NavLink>
+              <NavLink to={`/my-campaign/${user?.email}`} >My Campaign</NavLink>
               <NavLink to="/my-donation">My Donation</NavLink>
             </ul>
           </div>
@@ -41,7 +40,7 @@ const Navbar = () => {
               <NavLink to="/">Home</NavLink>
               <NavLink to="/all-campaign">All Campaign</NavLink>
               <NavLink to="/add-new-campaign">Add New Campaign</NavLink>
-              <NavLink to="/my-campaign">My Campaign</NavLink>
+              <NavLink to={`/my-campaign/${user?.email}`} >My Campaign</NavLink>
               <NavLink to="/my-donation">My Donation</NavLink>
           </ul>
         </div>
@@ -53,7 +52,7 @@ const Navbar = () => {
               <button className="font-semibold py-2 px-3 bg-[#FFB800] rounded-md" onClick={handleLogOut}>Logout</button>
             </div>) :
             (<NavLink to="/login">
-              <a className="py-2 px-3 bg-[#3b6781] rounded-md font-semibold">Login</a>
+              <a className="py-2 px-3 bg-[#a6c1ee] rounded-md font-semibold">Login</a>
             </NavLink>)
          }
         </div>

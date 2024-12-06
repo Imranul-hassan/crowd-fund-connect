@@ -1,7 +1,38 @@
-import { useLoaderData } from "react-router-dom";
-
+import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 const MyCampaign = () => {
     const myCampaign = useLoaderData();
+    
+    const handleDelete= (_id) =>{
+        console.log(_id)
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+            
+              fetch(`http://localhost:5000/campaign/${_id}`,{
+                method: 'DELETE'
+              })
+              .then(res => res.json())
+              .then(data =>{
+                console.log(data);
+                if(data.deletedCount>0){
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your campaign has been deleted.",
+                        icon: "success"
+                    });
+                }
+              })
+            }
+          });
+    }
     return (
         <div className="my-10">
             <h2 className="text-2xl font-bold text-center mb-8">My Campaigns</h2>
@@ -33,15 +64,19 @@ const MyCampaign = () => {
                                     <td className="border border-gray-300 px-4 py-2 text-center">${campaign.amount}</td>
                                     <td className="border border-gray-300 px-4 py-2">{campaign.deadline}</td>
                                     <td className="border border-gray-300 px-4 py-2">
-                                        <button className="btn btn-sm bg-blue-500 text-white hover:bg-blue-600 rounded-md">
-                                            Update
-                                        </button>
-                                        <button className="btn btn-sm bg-red-500 text-white hover:bg-red-600 rounded-md">
+                                        <Link to={`update-campaign/${campaign._id}`}>
+                                            <button className="btn btn-sm bg-blue-500 text-white hover:bg-blue-600 rounded-md">
+                                                Update
+                                            </button>
+                                        </Link>
+                                        <button onClick={()=> handleDelete(campaign._id)}
+                                        className="btn btn-sm bg-red-500 text-white hover:bg-red-600 rounded-md">
                                             Delete
                                         </button>
                                     </td>
                                 </tr>
                             ))
+
                         }
                     </tbody>
                 </table>

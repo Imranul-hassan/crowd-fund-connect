@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import CampaignCard from "../components/CampaignCard";
 import Slider from "../components/Slider";
 
+
 const Home = () => {
     const campaigns = useLoaderData();
     return (

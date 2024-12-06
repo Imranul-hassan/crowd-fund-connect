@@ -1,7 +1,8 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
-import logo from "../assets/google.png"
+import logo from "../assets/google.png";
+import login from "../assets/login-1.jpg"
 
 
 const Login = () => {
@@ -12,9 +13,9 @@ const Login = () => {
     const [email, setEmail] = useState("");
  
 
-    const handleForgotPassword = () => {
-        navigate("/forgot-password", { state: { email } });
-    };
+    // const handleForgotPassword = () => {
+    //     navigate("/forgot-password", { state: { email } });
+    // };
 
     const handleSubmit =(e)=>{
         e.preventDefault();
@@ -40,8 +41,8 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <div className="my-10 flex justify-center items-center">
+        <div className="bg-[url('https://i.ibb.co.com/3yJwxkL/login-1.jpg')] bg-cover">
+            <div className="py-10 flex justify-center items-center">
                 <div className="card bg-base-100 w-full max-w-sm shrink-0">
                 <h2 className=" font-semibold text-2xl text-center mt-2">Login your account</h2>
                 <form onSubmit={handleSubmit}  className="card-body pt-3 ">

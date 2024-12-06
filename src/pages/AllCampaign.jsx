@@ -33,7 +33,7 @@ const AllCampaign = () => {
                                 <td className="border border-gray-300 px-4 py-2">{campaign.user_name}</td>
                                 <td className="border border-gray-300 px-4 py-2">
                                     <Link to={`/campaign-details/${campaign._id}`}>
-                                        <button className="btn bg-lime-500 rounded-lg">See More</button>
+                                        <button className="btn bg-emerald-600 rounded-lg text-white text-base">See More</button>
                                     </Link>
                                 </td>
                             </tr>
