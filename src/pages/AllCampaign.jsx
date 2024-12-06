@@ -20,7 +20,7 @@ const AllCampaign = () => {
                             <th className="border border-gray-300 px-4 py-2">Action</th>
                         </tr>
                     </thead>
-                    
+
                     <tbody>
                     {
                         campaigns.map(campaign =>
@@ -33,7 +33,7 @@ const AllCampaign = () => {
                                 <td className="border border-gray-300 px-4 py-2">{campaign.user_name}</td>
                                 <td className="border border-gray-300 px-4 py-2">
                                     <Link to={`/campaign-details/${campaign._id}`}>
-                                        <button className="btn btn-primary">See More</button>
+                                        <button className="btn bg-lime-500 rounded-lg">See More</button>
                                     </Link>
                                 </td>
                             </tr>

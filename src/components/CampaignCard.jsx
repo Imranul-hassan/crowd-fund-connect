@@ -6,26 +6,24 @@ const CampaignCard = ({campaign}) => {
 
     return (
         <div>
-            <div className="card bg-white  shadow-2xl rounded-lg mb-5">
-                <figure className="w-full h-48 p-4">
-                    <img src={photo} alt={campaign_title} className="w-full h-full object-cover" />
+            <div className="card bg-white  shadow-2xl rounded-2xl mb-5">
+                <figure className="w-full h-48 p-4 ">
+                    <img src={photo} alt={campaign_title} className="w-full h-full rounded-lg object-cover" />
                 </figure>
                 <div className="card-body p-6">
                     <h2 className="card-title text-xl font-bold text-gray-800">{campaign_title}</h2>
-                    <p className="text-sm text-gray-500 mt-1 mb-3">{campaign_type}</p>
+                    <p className="text-sm text-gray-500 mt-1 ">{campaign_type}</p>
                     <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
-                    <div className="mt-4">
-                        <p className="text-sm font-semibold text-gray-700">
-                            <span className="font-bold">Amount:</span> ${amount}
-                        </p>
-                        <p className="text-sm font-semibold text-gray-700">
-                            <span className="font-bold">Deadline:</span> {new Date(deadline).toLocaleDateString()}
-                        </p>
-                    </div>
-                    
-                    <div className="card-actions mt-6">
+                    <p className="text-sm font-semibold text-gray-700">
+                        <span className="font-bold">Amount:</span> ${amount}
+                    </p>
+                    <p className="text-sm font-semibold text-gray-700">
+                        <span className="font-bold">Deadline:</span> {new Date(deadline).toLocaleDateString()}
+                    </p>
+                   
+                    <div className="card-actions mt-4 ">
                         <Link to={`campaign-details/${campaign._id}`}>
-                            <button className="btn btn-primary w-full text-white bg-blue-500 hover:bg-blue-600 rounded-md py-2 px-4">
+                            <button className="text-base btn text-white bg-emerald-600 hover:bg-emerald-600 rounded-full py-2 px-12">
                                 See More
                             </button>
                         </Link>

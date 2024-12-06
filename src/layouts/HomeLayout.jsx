@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 
 const HomeLayout = () => {
     return (
-        <div>
+        <div className="bg-[#FAFAFA]">
              <ToastContainer />
             <nav className="bg-sky-700">
                 <Navbar></Navbar>
