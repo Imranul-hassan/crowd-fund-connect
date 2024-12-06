@@ -38,11 +38,11 @@ import UpdateCampaign from "../pages/UpdateCampaign";
                   </PrivateRoute>
         },
         {
-          path: 'update-campaign/:id',
+          path: 'my-campaign/:user_email/update-campaign/:id',
           element: <PrivateRoute>
                        <UpdateCampaign></UpdateCampaign>
                   </PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/campaign/${params.id}`)
+          loader: ({params}) => fetch(`http://localhost:5000/my-campaign/${params.user_email}/update-campaign/${params.id}`)
         
         },
         {

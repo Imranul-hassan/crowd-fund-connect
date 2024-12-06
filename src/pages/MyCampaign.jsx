@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../provider/AuthProvider";
 const MyCampaign = () => {
     const myCampaign = useLoaderData();
-    
+    const {user} = useContext(AuthContext)
+
     const handleDelete= (_id) =>{
         console.log(_id)
         Swal.fire({
@@ -64,7 +67,7 @@ const MyCampaign = () => {
                                     <td className="border border-gray-300 px-4 py-2 text-center">${campaign.amount}</td>
                                     <td className="border border-gray-300 px-4 py-2">{campaign.deadline}</td>
                                     <td className="border border-gray-300 px-4 py-2">
-                                        <Link to={`update-campaign/${campaign._id}`}>
+                                        <Link to={`/my-campaign/${user?.email}/update-campaign/${campaign._id}`}>
                                             <button className="btn btn-sm bg-blue-500 text-white hover:bg-blue-600 rounded-md">
                                                 Update
                                             </button>
