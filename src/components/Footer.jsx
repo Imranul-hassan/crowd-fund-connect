@@ -5,11 +5,11 @@ const Footer = () => {
    
     return (
         <div>
-            <footer className="footer footer-center bg-[#1D3557] text-base text-white rounded p-10">
+            <footer className="footer footer-center bg-[#1d6963] text-base text-white  rounded p-10">
                 <nav className="grid grid-flow-col gap-x-4 gap-y-2">
                     <NavLink to="/"><p className="link link-hover">Home</p></NavLink>
                     <Link to="/"> <p className="link link-hover">About us</p></Link>
-                    <NavLink to="/help"><a className="link link-hover">Contact</a></NavLink>
+                    <NavLink to="/add-new-campaign"><a className="link link-hover">Add new campaign</a></NavLink>
                     <NavLink to="/all-campaign"> <p className="link link-hover">All Campaign</p></NavLink>  
                 </nav>
                 <nav>

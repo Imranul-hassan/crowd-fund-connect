@@ -56,18 +56,18 @@ const UpdateCampaign = () => {
             <form onSubmit={handleUpdateCampaign}>
                 <div>
                     <div className="md:flex gap-3 p-5">
-                        <div className="w-1/2">
+                        <div className="md:w-1/2">
                             <label>Photo URL</label>
                             <input type="text" defaultValue={photo} placeholder="Photo URL" name="photo" className="input input-bordered w-full " />
                         </div>
-                        <div className="w-1/2">
+                        <div className="md:w-1/2">
                         <label>Campaign title</label>
                             <input type="text" defaultValue={campaign_title} placeholder="Campaign title" name="campaign_title" className="input input-bordered w-full " />
                         </div>
                     </div>
 
-                    <div className="flex gap-3 p-5">
-                        <div className="w-1/2">
+                    <div className="md:flex gap-3 p-5">
+                        <div className="md:w-1/2">
                         <label>Campaign title</label>
                             <select name="campaign_type" className="input input-bordered w-full">
                                 <option value="" disabled selected>
@@ -79,35 +79,37 @@ const UpdateCampaign = () => {
                                 <option value="creative">Creative Ideas</option>
                             </select>
                         </div>
-                        <div  className="w-1/2">
+                        <div  className="md:w-1/2">
                              <label>Description</label>
                             <input type="text" defaultValue={description} placeholder="Description" name="description" className="input input-bordered w-full " />
                         </div>
                     </div>
-                    <div className="flex gap-3 p-5">
-                        <div  className="w-1/2">
+                    <div className="md:flex gap-3 p-5">
+                        <div  className="md:w-1/2">
                             <label>Minimum donation amount</label>
                             <input type="number" defaultValue={amount} placeholder="Minimum donation amount" name="amount" className="input input-bordered w-full " />
                         </div>
-                        <div  className="w-1/2">
+                        <div  className="md:w-1/2">
                             <label>Deadline</label>
                             <input type="date" defaultValue={deadline} placeholder="Deadline" name="deadline" className="input input-bordered w-full " />
                         </div>
                     </div>
 
                     <div className="md:flex gap-3 p-5">
-                        <div className="w-1/2">
+                        <div className="md:w-1/2">
                             <label>User Email </label>
                             <input type="text" value={user.email} name="user_email" className="input input-bordered w-full " />
                         </div>
-                        <div className="w-1/2">
+                        <div className="md:w-1/2">
                         <label> User Name</label>
                             <input type="text" value={user.displayName} name="user_name" className="input input-bordered w-full " />
                         </div>
                     </div>
                     
                 </div>
-                <input type="submit"  value='Update coffee' className="btn btn-block bg-lime-300 mb-10"/>
+                <div className="p-5">
+                    <input type="submit"  value='Update coffee' className="btn btn-block bg-lime-300 mb-10"/>
+                </div>
             </form>
         </div>
     );

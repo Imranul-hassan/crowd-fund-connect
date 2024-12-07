@@ -52,7 +52,7 @@ const Navbar = () => {
               <button className="font-semibold py-2 px-3 bg-[#FFB800] rounded-md" onClick={handleLogOut}>Logout</button>
             </div>) :
             (<NavLink to="/login">
-              <a className="py-2 px-3 bg-[#a6c1ee] rounded-md font-semibold">Login</a>
+              <a className="py-2 px-3 bg-[#112548] rounded-md font-semibold">Login</a>
             </NavLink>)
          }
         </div>

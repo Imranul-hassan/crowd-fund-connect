@@ -41,7 +41,7 @@ const Login = () => {
     }
 
     return (
-        <div className="bg-[url('https://i.ibb.co.com/3yJwxkL/login.jpg')] bg-cover">
+        <div className="">
             <div className="py-10 flex justify-center items-center">
                 <div className="card bg-base-100 w-full max-w-sm shrink-0">
                 <h2 className=" font-semibold text-2xl text-center mt-2">Login your account</h2>
@@ -59,7 +59,7 @@ const Login = () => {
                     <input name="password" type="password" placeholder="password" autoComplete="off" className="input input-bordered" required />
                     </div>
                     <div className="form-control mt-4">
-                         <button type="submit" className="btn bg-[#3b6781] text-white font-bold">Login</button>
+                         <button type="submit" className="btn bg-[#15415a] text-white font-bold">Login</button>
                     </div>
 
                     <div className="flex mt-4 border p-2 rounded-md items-center justify-center">
