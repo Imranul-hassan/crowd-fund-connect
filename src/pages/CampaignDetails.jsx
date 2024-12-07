@@ -8,7 +8,8 @@ const CampaignDetails = () => {
     const {user} = useContext(AuthContext);
     const { photo, campaign_title, campaign_type, description, amount, deadline, user_email, user_name } = campaignDetails;
     const handleDonated = ()=>{
-
+        const user_email = user.email; 
+        const user_name = user.displayName;
         const donationData =  { photo, campaign_title, campaign_type, description, amount, deadline, user_email, user_name };
         fetch('https://crowd-funding-server-rho.vercel.app/my-donation',{
             method: 'POST',
@@ -51,10 +52,10 @@ const CampaignDetails = () => {
                     <hr className="my-4" />
                     <div className="text-sm text-gray-500">
                         <p>
-                            <span className="font-bold">Organizer:</span> {user_name}
+                            <span className="font-bold">Organizer:</span> {user.displayName}
                         </p>
                         <p>
-                            <span className="font-bold">Contact:</span> {user_email}
+                            <span className="font-bold">Contact:</span> {user.email}
                         </p>
                     </div>
                     <div className="card-actions mt-6">
