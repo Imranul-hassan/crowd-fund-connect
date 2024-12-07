@@ -59,10 +59,11 @@ import UpdateCampaign from "../pages/UpdateCampaign";
           loader: ({params}) => fetch(`http://localhost:5000/my-campaign/${params.user_email}`)
         },
         {
-          path: 'my-donation',
+          path: 'my-donation/:user_email',
           element:<PrivateRoute>
                     <MyDonation></MyDonation>
-                 </PrivateRoute>
+                 </PrivateRoute>,
+          loader: ({params})=> fetch(`http://localhost:5000/my-donation/${params.user_email}`)
         },
         {
           path: '/login',

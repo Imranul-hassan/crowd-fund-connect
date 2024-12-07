@@ -30,7 +30,7 @@ const Navbar = () => {
               <NavLink to="/all-campaign">All Campaign</NavLink>
               <NavLink to="/add-new-campaign">Add New Campaign</NavLink>
               <NavLink to={`/my-campaign/${user?.email}`} >My Campaign</NavLink>
-              <NavLink to="/my-donation">My Donation</NavLink>
+              <NavLink to={`/my-donation/${user?.email}`}>My Donations</NavLink>
             </ul>
           </div>
           <NavLink to="/" className="btn btn-ghost text-xl pl-0">CROWDFUNDING</NavLink>
@@ -41,7 +41,7 @@ const Navbar = () => {
               <NavLink to="/all-campaign">All Campaign</NavLink>
               <NavLink to="/add-new-campaign">Add New Campaign</NavLink>
               <NavLink to={`/my-campaign/${user?.email}`} >My Campaign</NavLink>
-              <NavLink to="/my-donation">My Donation</NavLink>
+              <NavLink to={`/my-donation/${user?.email}`}>My Donations</NavLink>
           </ul>
         </div>
         <div className="navbar-end">
