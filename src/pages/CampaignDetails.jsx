@@ -10,7 +10,7 @@ const CampaignDetails = () => {
     const handleDonated = ()=>{
 
         const donationData =  { photo, campaign_title, campaign_type, description, amount, deadline, user_email, user_name };
-        fetch('http://localhost:5000/my-donation',{
+        fetch('https://crowd-funding-server-rho.vercel.app/my-donation',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

@@ -1,8 +1,24 @@
-# React + Vite
+# Crowdfund Connect - Crowdfunding for a Better Tomorrow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Crowdfund Connect is a dynamic crowdfunding platform where users can create, manage, and contribute to various campaigns for personal causes, startups, creative projects, and more.
 
-Currently, two official plugins are available:
+## Live Link
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Live Site Link**: Crowdfund Connect - Crowdfunding for a Better Tomorrow (`https://crowd-funding-855d09.netlify.app/`).
+
+## Features
+
+- **User Authentication**: Secure email and password-based login, with optional Google authentication.
+- **Campaign Management**: Users can create, update, delete, and view campaigns.
+- **Donation Tracking**: Users can view their donation history.
+- **Private Routes**: Certain pages are protected and require authentication to access.
+- **Responsive Design**: Fully responsive layout, optimized for mobile and desktop.
+- **Toast Notifications**: Success and error messages displayed using toast notifications.
+
+## Tech Stack
+
+- **Frontend**: React, Tailwind CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Authentication**: Firebase 
+

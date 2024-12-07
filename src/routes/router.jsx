@@ -1,5 +1,4 @@
 
-
 import {createBrowserRouter} from "react-router-dom";
 import HomeLayout from "../layouts/HomeLayout";
 import { Children } from "react";
@@ -23,13 +22,13 @@ import UpdateCampaign from "../pages/UpdateCampaign";
         {
           path:'/',
           element: <Home></Home>,
-          loader: ()=> fetch('http://localhost:5000/campaign')
+          loader: ()=> fetch('https://crowd-funding-server-rho.vercel.app/campaign')
 
         },
         {
           path: 'all-campaign',
           element: <AllCampaign></AllCampaign>,
-          loader: ()=> fetch('http://localhost:5000/campaign')
+          loader: ()=> fetch('https://crowd-funding-server-rho.vercel.app/campaign')
         },
         {
           path: 'add-new-campaign',
@@ -42,7 +41,7 @@ import UpdateCampaign from "../pages/UpdateCampaign";
           element: <PrivateRoute>
                        <UpdateCampaign></UpdateCampaign>
                   </PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/my-campaign/${params.user_email}/update-campaign/${params.id}`)
+          loader: ({params}) => fetch(`https://crowd-funding-server-rho.vercel.app/my-campaign/${params.user_email}/update-campaign/${params.id}`)
         
         },
         {
@@ -50,20 +49,22 @@ import UpdateCampaign from "../pages/UpdateCampaign";
           element: <PrivateRoute>
                        <CampaignDetails></CampaignDetails>
                   </PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/campaign/${params.id}`)
+          loader: ({params}) => fetch(`https://crowd-funding-server-rho.vercel.app/campaign/${params.id}`)
         
         },
         {
           path: 'my-campaign/:user_email',
-          element: <MyCampaign></MyCampaign>,
-          loader: ({params}) => fetch(`http://localhost:5000/my-campaign/${params.user_email}`)
+          element: <PrivateRoute>
+              <MyCampaign></MyCampaign>
+          </PrivateRoute>,
+          loader: ({params}) => fetch(`https://crowd-funding-server-rho.vercel.app/my-campaign/${params.user_email}`)
         },
         {
           path: 'my-donation/:user_email',
           element:<PrivateRoute>
                     <MyDonation></MyDonation>
                  </PrivateRoute>,
-          loader: ({params})=> fetch(`http://localhost:5000/my-donation/${params.user_email}`)
+          loader: ({params})=> fetch(`https://crowd-funding-server-rho.vercel.app/my-donation/${params.user_email}`)
         },
         {
           path: '/login',
