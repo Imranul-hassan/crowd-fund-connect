@@ -6,10 +6,10 @@ const AllCampaign = () => {
     const [campaigns, setCampaigns] = useState(loadCampaigns);
 
     return (
-        <div className="m-10">
+        <div className="mb-10">
+            <h3 className="text-2xl text-center font-bold py-2 mb-4">All Campaigns</h3>
             <div className="overflow-x-auto">
-                <table className="table">
-                  
+                <table className="table-auto w-full border-collapse border border-gray-300">
                     <thead>
                         <tr className="bg-gray-200">
                             <th className="border border-gray-300 px-4 py-2">Campaign Title</th>
