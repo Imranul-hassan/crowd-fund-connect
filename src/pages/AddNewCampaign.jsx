@@ -102,7 +102,7 @@ const AddNewCampaign = () => {
                     
                 </div>
                <div className='p-5'>
-                    <input type="submit"  value='Add Campaign' className="btn btn-block bg-[#2AB8A6] mb-4 text-white "/>
+                    <input type="submit"  value='Add New Campaign' className="btn btn-block bg-[#2AB8A6] mb-4 text-white "/>
                </div>
             </form>
         </div>

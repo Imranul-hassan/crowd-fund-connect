@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import CampaignCard from "../components/CampaignCard";
 import Slider from "../components/Slider";
+import FAQ from "../components/FAQ";
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
                   
                 }  
             </div>
+            <FAQ></FAQ>
         </div>
     );
 };
