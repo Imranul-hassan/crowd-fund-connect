@@ -1,9 +1,35 @@
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const CampaignDetails = () => {
     const campaignDetails = useLoaderData();
+    const {user} = useContext(AuthContext);
     const { photo, campaign_title, campaign_type, description, amount, deadline, user_email, user_name } = campaignDetails;
+    const handleDonated = ()=>{
 
+        const donationData =  { photo, campaign_title, campaign_type, description, amount, deadline, user_email, user_name };
+        fetch('http://localhost:5000/my-donation',{
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(donationData)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'sucess!',
+                    text: 'Donated successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                })
+            }
+        })
+    }
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100">
             <div className="card bg-white w-96 shadow-xl rounded-lg">
@@ -32,7 +58,8 @@ const CampaignDetails = () => {
                         </p>
                     </div>
                     <div className="card-actions mt-6">
-                        <button className="btn btn-primary w-full text-white bg-blue-500 hover:bg-blue-600 rounded-md py-2 px-4">
+                        <button onClick={()=>handleDonated()}
+                        className="btn btn-primary w-full text-white bg-blue-500 hover:bg-blue-600 rounded-md py-2 px-4">
                             Donate Now
                         </button>
                     </div>
