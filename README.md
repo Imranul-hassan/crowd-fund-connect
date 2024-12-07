@@ -4,7 +4,7 @@ Crowdfund Connect is a dynamic crowdfunding platform where users can create, man
 
 ## Live Link
 
-- **Live Site Link**: Crowdfund Connect - Crowdfunding for a Better Tomorrow (`https://crowd-funding-855d09.netlify.app/`).
+- **Live Site Link**: [Crowdfund Connect](https://gadget-heaven-react.netlify.app/) .
 
 ## Features
 
