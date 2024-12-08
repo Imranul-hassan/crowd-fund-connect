@@ -75,7 +75,7 @@ const MyCampaign = () => {
                                     <td className="border border-gray-300 px-3 py-2">{campaign.deadline}</td>
                                     <td className="border border-gray-300 px-3 py-2">
                                         <Link to={`/my-campaign/${user?.email}/update-campaign/${campaign._id}`}>
-                                            <button className="btn btn-sm bg-blue-500 text-white hover:bg-blue-600 rounded-md">
+                                            <button className="btn btn-sm bg-teal-600 text-white hover:bg-teal-600 rounded-md">
                                                 Update
                                             </button>
                                         </Link>

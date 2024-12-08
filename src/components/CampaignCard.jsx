@@ -23,7 +23,7 @@ const CampaignCard = ({campaign}) => {
                    
                     <div className="card-actions mt-4 ">
                         <Link to={`campaign-details/${campaign._id}`}>
-                            <button className="text-base btn text-white bg-emerald-600 hover:bg-emerald-600 rounded-full py-2 px-24">
+                            <button className="text-base btn text-white bg-teal-800 hover:bg-teal-600 rounded-full py-2 px-24">
                                 See More
                             </button>
                         </Link>

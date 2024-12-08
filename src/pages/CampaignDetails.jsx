@@ -48,14 +48,14 @@ const CampaignDetails = () => {
             <div className="card bg-white shadow-xl rounded-lg fl md:flex flex md:flex-row flex-col mb-8">
                 <div className="md:w-1/2">
                     <figure className="w-full h-full p-4">
-                        <img src={photo} alt={campaign_title} className="w-full h-full object-cover" />
+                        <img src={photo} alt={campaign_title} className="w-full h-full object-cover rounded-md" />
                     </figure>
                 </div>
 
                 <div className="card-body p-6 md:w-1/2">
                     <h2 className="card-title text-2xl font-bold text-gray-800">{campaign_title}</h2>
                     <p className="text-sm text-gray-500 mt-1 mb-3">{campaign_type}</p>
-                    <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+                    <p className="text-gray-700 text-sm leading-relaxed">{description}</p>
 
                     <p className="text-sm font-semibold text-gray-700">
                         <span className="font-bold">Amount:</span> ${amount}
@@ -65,15 +65,15 @@ const CampaignDetails = () => {
                     </p>
 
                     <p className="text-gray-700">
-                        <span className="font-bold ">Donated By:</span> {user.displayName}
+                        <span className="font-bold ">Donor Name:</span> {user.displayName}
                     </p>
                     <p className="text-gray-700">
-                        <span className="font-bold">Contact:</span> {user.email}
+                        <span className="font-bold">Donor Contact:</span> {user.email}
                     </p>
 
                     <div className="card-actions mt-6">
                         <button onClick={() => handleDonated()}
-                            className="btn btn-primary w-full text-white bg-blue-500 hover:bg-blue-600 rounded-md py-2 px-4">
+                            className="btn btn-primary w-full text-white text-lg bg-blue-500 hover:bg-blue-600 rounded-md py-2 px-4">
                             Donate Now
                         </button>
                     </div>
