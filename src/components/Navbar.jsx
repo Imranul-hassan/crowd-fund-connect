@@ -76,7 +76,7 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
               </div>
             )
         }
-        
+
         <input
           type="checkbox"
           checked={isDarkMode}

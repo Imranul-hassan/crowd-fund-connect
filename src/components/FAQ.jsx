@@ -6,7 +6,7 @@ const FAQ = () => {
                 <h1 className="font-bold text-3xl text-center">Quick Answers for a Seamless Experience</h1>
                 <p className="mt-4 w-9/12 text-center mx-auto">Explore answers to frequently asked questions and make the most of your crowdfunding experience.</p>
             </div>
-           <div className="md:w-8/12 mx-auto ">
+            <div className="md:w-8/12 mx-auto ">
                 <div className="collapse collapse-arrow bg-blue-400">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">How do I register on the website?</div>
@@ -42,7 +42,7 @@ const FAQ = () => {
                         <p>Yes, you can see all your donations on the My Donations page.</p>
                     </div>
                 </div>
-           </div>
+            </div>
         </div>
     );
 };

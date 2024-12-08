@@ -1,5 +1,4 @@
 
-
 const DonationCard = ({donation}) => {
     const { photo, campaign_title, campaign_type, description, amount, deadline, user_email, user_name } = donation;
     return (

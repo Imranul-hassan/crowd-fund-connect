@@ -37,7 +37,8 @@ const Login = () => {
         <div className="">
             <div className="py-10 flex justify-center items-center">
                 <div className="card bg-base-100 w-full max-w-sm shrink-0">
-                    <h2 className=" font-semibold text-2xl text-center mt-2">Login your account</h2>
+                    <h2 className=" font-semibold text-2xl text-center mt-2 text-slate-700">Login your account</h2>
+
                     <form onSubmit={handleSubmit} className="card-body pt-3 ">
                         <div className="form-control">
                             <label className="label">
@@ -57,11 +58,11 @@ const Login = () => {
 
                         <div className="flex mt-4 border p-2 rounded-md items-center justify-center">
                             <img className="w-9" src={logo}></img>
-                            <button className=" bg-white" onClick={googleLoginHandler}>Sign in with google</button>
+                            <button className=" bg-white" onClick={googleLoginHandler}><span className="text-slate-800">Sign in with google</span></button>
                         </div>
                         {error && <p className="text-red-400">{error}</p>}
                     </form>
-                    <p className="text-center mb-5 font-semibold">Dont’t Have An Account ? <Link to="/register"> <span className="text-orange-500">Register</span></Link></p>
+                    <p className="text-center mb-5 font-semibold text-slate-700">Dont’t Have An Account ? <Link to="/register"> <span className="text-orange-500">Register</span></Link></p>
                 </div>
             </div>
         </div>
