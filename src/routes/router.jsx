@@ -28,7 +28,7 @@ import UpdateCampaign from "../pages/UpdateCampaign";
         {
           path: 'all-campaign',
           element: <AllCampaign></AllCampaign>,
-          loader: ()=> fetch('https://crowd-funding-server-rho.vercel.app/campaign')
+          loader: ()=> fetch('https://crowd-funding-server-rho.vercel.app/campaigns')
         },
         {
           path: 'add-new-campaign',
