@@ -53,7 +53,7 @@ const CampaignDetails = () => {
                 </div>
 
                 <div className="card-body p-6 md:w-1/2">
-                    <h2 className="card-title text-xl font-bold text-gray-800">{campaign_title}</h2>
+                    <h2 className="card-title text-2xl font-bold text-gray-800">{campaign_title}</h2>
                     <p className="text-sm text-gray-500 mt-1 mb-3">{campaign_type}</p>
                     <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
 

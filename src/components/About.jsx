@@ -8,8 +8,8 @@ const About = () => {
             <div className=" pr-4">
                 <div className="w-9/12 mx-auto text-center ">
                     <h3 className="font-bold text-xl">About Us</h3>
-                    <h1 className="font-semibold text-4xl my-3 ">Empowering Ideas, Transforming Lives</h1>
-                    <p>Welcome to [Crowdfunding] – where dreams come alive through the power of community and collaboration. We connect ideas and causes with supporters worldwide, turning aspirations into reality!</p>
+                    <h1 className="font-semibold text-2xl md:text-4xl my-3 ">Empowering Ideas, Transforming Lives</h1>
+                    <p>Welcome to Crowdfunding Platform – where dreams come alive through the power of community and collaboration. We connect ideas and causes with supporters worldwide, turning aspirations into reality!</p>
                 </div>
                 <div className=" md:grid grid-cols-3 mt-6 gap-3 animate__animated animate__bounce animate__delay-1s ">
 

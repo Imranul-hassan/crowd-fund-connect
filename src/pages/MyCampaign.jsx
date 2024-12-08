@@ -48,18 +48,20 @@ const MyCampaign = () => {
                 <table className="table-auto w-full border-collapse border border-gray-300">
                     <thead>
                         <tr className="bg-slate-500 text-white">
-                            <th className="border border-gray-300 px-4 py-2">Photo</th>
-                            <th className="border border-gray-300 px-4 py-2">Title</th>
-                            <th className="border border-gray-300 px-4 py-2">Type</th>
-                            <th className="border border-gray-300 px-4 py-2">Minimum Amount</th>
-                            <th className="border border-gray-300 px-4 py-2">Deadline</th>
-                            <th className="border border-gray-300 px-4 py-2">Actions</th>
+                            <th className="border border-gray-300 px-3 py-2">Serial</th>
+                            <th className="border border-gray-300 px-3 py-2">Photo</th>
+                            <th className="border border-gray-300 px-3 py-2">Title</th>
+                            <th className="border border-gray-300 px-3 py-2">Type</th>
+                            <th className="border border-gray-300 px-3 py-2">Minimum Amount</th>
+                            <th className="border border-gray-300 px-3 py-2">Deadline</th>
+                            <th className="border border-gray-300 px-3 py-2">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            campaigns.map((campaign) => (
+                            campaigns.map((campaign, index) => (
                                 <tr key={campaign._id}>
+                                    <td className="border border-gray-300 px-4 py-2 text-center">{index + 1}</td>
                                     <td className="border border-gray-300 px-4 py-2">
                                         <img 
                                             src={campaign.photo} 
@@ -67,11 +69,11 @@ const MyCampaign = () => {
                                             className="w-16 h-16 object-cover rounded-md"
                                         />
                                     </td>
-                                    <td className="border border-gray-300 px-4 py-2">{campaign.campaign_title}</td>
-                                    <td className="border border-gray-300 px-4 py-2">{campaign.campaign_type}</td>
-                                    <td className="border border-gray-300 px-4 py-2 text-center">${campaign.amount}</td>
-                                    <td className="border border-gray-300 px-4 py-2">{campaign.deadline}</td>
-                                    <td className="border border-gray-300 px-4 py-2">
+                                    <td className="border border-gray-300 px-3 py-2">{campaign.campaign_title}</td>
+                                    <td className="border border-gray-300 px-3 py-2">{campaign.campaign_type}</td>
+                                    <td className="border border-gray-300 px-3 py-2 text-center">${campaign.amount}</td>
+                                    <td className="border border-gray-300 px-3 py-2">{campaign.deadline}</td>
+                                    <td className="border border-gray-300 px-3 py-2">
                                         <Link to={`/my-campaign/${user?.email}/update-campaign/${campaign._id}`}>
                                             <button className="btn btn-sm bg-blue-500 text-white hover:bg-blue-600 rounded-md">
                                                 Update
