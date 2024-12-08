@@ -51,25 +51,25 @@ const UpdateCampaign = () => {
     }
 
     return (
-        <div className='bg-[#aee7de] mt-5  mb-10 rounded-lg'>
+        <div className='bg-slate-500 mt-5  mb-10 rounded-lg'>
            <h3 className="text-3xl text-center font-bold py-2">Update Campaign: {campaign_title}</h3>
             <form onSubmit={handleUpdateCampaign}>
                 <div>
                     <div className="md:flex gap-3 p-5">
                         <div className="md:w-1/2">
                             <label className='font-bold'>Photo URL</label>
-                            <input type="text" defaultValue={photo} placeholder="Photo URL" name="photo" className="input input-bordered w-full " />
+                            <input type="text" defaultValue={photo} placeholder="Photo URL" name="photo" className="input input-bordered w-full bg-slate-400 " />
                         </div>
                         <div className="md:w-1/2">
                         <label className='font-bold'>Campaign title</label>
-                            <input type="text" defaultValue={campaign_title} placeholder="Campaign title" name="campaign_title" className="input input-bordered w-full " />
+                            <input type="text" defaultValue={campaign_title} placeholder="Campaign title" name="campaign_title" className="input input-bordered w-full bg-slate-400 " />
                         </div>
                     </div>
 
                     <div className="md:flex gap-3 p-5">
                         <div className="md:w-1/2">
                         <label className='font-bold'>Campaign title</label>
-                            <select name="campaign_type" className="input input-bordered w-full">
+                            <select name="campaign_type" className="input input-bordered w-full bg-slate-400">
                                 <option value="" disabled selected>
                                 Select Campaign Type
                                 </option>
@@ -81,28 +81,28 @@ const UpdateCampaign = () => {
                         </div>
                         <div  className="md:w-1/2">
                              <label className='font-bold'>Description</label>
-                            <input type="text" defaultValue={description} placeholder="Description" name="description" className="input input-bordered w-full " />
+                            <input type="text" defaultValue={description} placeholder="Description" name="description" className="input input-bordered w-full bg-slate-400 " />
                         </div>
                     </div>
                     <div className="md:flex gap-3 p-5">
                         <div  className="md:w-1/2">
                             <label className='font-bold'>Minimum donation amount</label>
-                            <input type="number" defaultValue={amount} placeholder="Minimum donation amount" name="amount" className="input input-bordered w-full " />
+                            <input type="number" defaultValue={amount} placeholder="Minimum donation amount" name="amount" className="input input-bordered w-full bg-slate-400" />
                         </div>
                         <div  className="md:w-1/2">
                             <label className='font-bold'>Deadline</label>
-                            <input type="date" defaultValue={deadline} placeholder="Deadline" name="deadline" className="input input-bordered w-full " />
+                            <input type="date" defaultValue={deadline} placeholder="Deadline" name="deadline" className="input input-bordered w-full bg-slate-400" />
                         </div>
                     </div>
 
                     <div className="md:flex gap-3 p-5">
                         <div className="md:w-1/2">
                             <label className='font-bold'>User Email </label>
-                            <input type="text" value={user.email} name="user_email" className="input input-bordered w-full " />
+                            <input type="text" value={user.email} name="user_email" className="input input-bordered w-full bg-slate-400" />
                         </div>
                         <div className="md:w-1/2">
                         <label className='font-bold'> User Name</label>
-                            <input type="text" value={user.displayName} name="user_name" className="input input-bordered w-full " />
+                            <input type="text" value={user.displayName} name="user_name" className="input input-bordered w-full bg-slate-400" />
                         </div>
                     </div>
                     

@@ -4,6 +4,8 @@ import Slider from "../components/Slider";
 import FAQ from "../components/FAQ";
 import { Typewriter } from 'react-simple-typewriter'
 import { JackInTheBox } from "react-awesome-reveal";
+import About from "../components/About";
+
 
 const Home = () => {
     const campaigns = useLoaderData();
@@ -23,7 +25,6 @@ return (
             <h1 className="text-4xl text-center " style={{ paddingTop: '2rem', margin: 'auto 0', fontWeight: 'bold' }}>
              Ongoing Campaigns{' '}
                 <span style={{ color: 'red', fontWeight: 'bold' }}>
-                    {/* Style will be inherited from the parent element */}
                     <Typewriter
                         words={['Personal Needs', 'Creative Ideas', 'Startups']}
                         loop={10}
@@ -48,6 +49,7 @@ return (
 
             }
         </div>
+        <About></About>
         <JackInTheBox>
             <FAQ></FAQ>
         </JackInTheBox>

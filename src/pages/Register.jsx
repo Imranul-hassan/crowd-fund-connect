@@ -5,6 +5,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import logo from "../assets/google.png"
+import Swal from "sweetalert2";
 
 const Register = () => {
     const {handleRegister, manageProfile, handleGoogleLogin} = useContext(AuthContext);
@@ -35,7 +36,15 @@ const Register = () => {
         console.log(error)
         handleRegister(email, password)
         .then(res =>{
-            manageProfile(name, photo)
+            manageProfile(name, photo).then(() => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Registration Successful!',
+                    text: 'Welcome to our platform. You have successfully registered.',
+                    confirmButtonColor: '#3b6781',
+                });
+                navigate("/");
+            });
             navigate("/")
         })
      
@@ -43,7 +52,7 @@ const Register = () => {
     const googleHandler=()=>{
         handleGoogleLogin()
         .then(res=>{
-            // 
+            
             navigate("/")
         })
 

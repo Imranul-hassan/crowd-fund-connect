@@ -7,7 +7,7 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
 
 
   return (
-    <div className="navbar w-11/12 mx-auto text-white ">
+    <div className="navbar md:w-11/12 mx-auto text-white ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -59,7 +59,7 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
                   {user.displayName}
                 </div>
               </div>
-              <button className="font-semibold py-2 px-3 bg-[#FFB800] rounded-md" onClick={handleLogOut}>Logout</button>
+              <button className="font-semibold py-1  px-1 md:px-2 bg-[#FFB800] rounded-md" onClick={handleLogOut}>Logout</button>
             </div>) :
             (
               <div className="flex gap-2">

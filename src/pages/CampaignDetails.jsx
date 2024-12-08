@@ -46,13 +46,13 @@ const CampaignDetails = () => {
     return (
         <div className="flex justify-center items-center  my-10 ">
             <div className="card bg-white shadow-xl rounded-lg fl md:flex flex md:flex-row flex-col mb-8">
-                <div>
+                <div className="md:w-1/2">
                     <figure className="w-full h-full p-4">
                         <img src={photo} alt={campaign_title} className="w-full h-full object-cover" />
                     </figure>
                 </div>
 
-                <div className="card-body p-6">
+                <div className="card-body p-6 md:w-1/2">
                     <h2 className="card-title text-xl font-bold text-gray-800">{campaign_title}</h2>
                     <p className="text-sm text-gray-500 mt-1 mb-3">{campaign_type}</p>
                     <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
@@ -64,10 +64,10 @@ const CampaignDetails = () => {
                         <span className="font-bold">Deadline:</span> {new Date(deadline).toLocaleDateString()}
                     </p>
 
-                    <p>
-                        <span className="font-bold">Donated By:</span> {user.displayName}
+                    <p className="text-gray-700">
+                        <span className="font-bold ">Donated By:</span> {user.displayName}
                     </p>
-                    <p>
+                    <p className="text-gray-700">
                         <span className="font-bold">Contact:</span> {user.email}
                     </p>
 

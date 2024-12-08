@@ -34,7 +34,6 @@ const AuthProvider = ({children}) => {
         signOut(auth)
     }
 
-    console.log(user)
 
     const authInfo ={
         handleRegister,

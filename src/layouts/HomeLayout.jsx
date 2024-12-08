@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import { AuthContext } from "../provider/AuthProvider";
 
 
 const HomeLayout = () => {
@@ -18,20 +19,24 @@ const HomeLayout = () => {
             document.body.classList.remove("dark");
         }
     }, [isDarkMode]);
-    
+
     const handleCheckboxChange = (e) => {
         setIsDarkMode(e.target.checked);
     };
     //className="bg-[#E6F7F5] "
+    const { loading } = useContext(AuthContext)
 
     return (
         <div className={`min-h-screen ${isDarkMode ? "bg-gray-900 text-white" : "bg-[#E6F7F5] text-black"}`}>
-             <ToastContainer />
+            <ToastContainer />
             <nav className="bg-[#0f4f47]">
-                <Navbar  isDarkMode={isDarkMode} toggleTheme={toggleTheme} handleCheckboxChange={handleCheckboxChange}></Navbar>
+                <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} handleCheckboxChange={handleCheckboxChange}></Navbar>
             </nav>
+            <h2>
+                {loading ? <span className="loading loading-bars loading-lg"></span> : ''}
+            </h2>
             <main className="min-h-[calc(100vh-240px)] w-10/12 mx-auto">
-                <Outlet></Outlet> 
+                <Outlet></Outlet>
             </main>
             <footer>
                 <Footer></Footer>
