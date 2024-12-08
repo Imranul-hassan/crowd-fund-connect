@@ -8,6 +8,18 @@ const CampaignDetails = () => {
     const { user } = useContext(AuthContext);
     const { photo, campaign_title, campaign_type, description, amount, deadline, user_email, user_name } = campaignDetails;
     const handleDonated = () => {
+        const currentDate = new Date();
+        const campaignDeadline = new Date(deadline);
+        if (campaignDeadline < currentDate) {
+            Swal.fire({
+                title: 'Sorry!',
+                text: 'The campaign deadline has passed, you cannot donate anymore.',
+                icon: 'error',
+                confirmButtonText: 'Okay'
+            });
+            return; 
+        }
+
         const user_email = user.email;
         const user_name = user.displayName;
         const donationData = { photo, campaign_title, campaign_type, description, amount, deadline, user_email, user_name };

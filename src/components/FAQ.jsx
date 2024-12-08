@@ -1,7 +1,7 @@
 
 const FAQ = () => {
     return (
-        <div id="faq" className=" p-5 my-10">
+        <div id="faq" className=" p-5 my-10 ">
             <div className="md:w-7/12 mx-auto mb-7">
                 <h1 className="font-bold text-3xl text-center">Quick Answers for a Seamless Experience</h1>
                 <p className="mt-4">Explore answers to frequently asked questions and make the most of your crowdfunding experience.</p>

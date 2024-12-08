@@ -3,18 +3,17 @@ import CampaignCard from "../components/CampaignCard";
 import Slider from "../components/Slider";
 import FAQ from "../components/FAQ";
 import { Typewriter } from 'react-simple-typewriter'
-
+import { JackInTheBox } from "react-awesome-reveal";
 
 const Home = () => {
     const campaigns = useLoaderData();
     const handleType = (count) => {
-        // Logs each typewriter step count
-        console.log(`Current step: ${count}`);
+        
     };
-
-const handleDone = () => {
-    console.log(`Done after 5 loops!`)
-}
+    const handleDone = () => {
+        console.log(`Done after 5 loops!`)
+    }
+    
 
 return (
     <div>
@@ -49,7 +48,9 @@ return (
 
             }
         </div>
-        <FAQ></FAQ>
+        <JackInTheBox>
+            <FAQ></FAQ>
+        </JackInTheBox>
     </div>
 );
 };

@@ -2,8 +2,9 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
-const Navbar = () => {
+const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
   const { user, handleLogOut } = useContext(AuthContext)
+
 
   return (
     <div className="navbar w-11/12 mx-auto text-white ">
@@ -63,9 +64,9 @@ const Navbar = () => {
             (
               <div className="flex gap-2">
                 <div>
-                <NavLink to="/login">
-                  <a className="py-2 px-3 bg-[#112548] rounded-md font-semibold">Login</a>
-                </NavLink>
+                  <NavLink to="/login">
+                    <a className="py-2 px-3 bg-[#112548] rounded-md font-semibold">Login</a>
+                  </NavLink>
                 </div>
                 <div className="md:block hidden">
                   <NavLink to="/register">
@@ -75,6 +76,14 @@ const Navbar = () => {
               </div>
             )
         }
+        
+        <input
+          type="checkbox"
+          checked={isDarkMode}
+          onChange={handleCheckboxChange}
+          className="toggle theme-controller  m-2"
+        />
+
       </div>
     </div>
   );

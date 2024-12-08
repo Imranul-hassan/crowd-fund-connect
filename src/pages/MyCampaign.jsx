@@ -47,7 +47,7 @@ const MyCampaign = () => {
             <div className="overflow-x-auto">
                 <table className="table-auto w-full border-collapse border border-gray-300">
                     <thead>
-                        <tr className="bg-gray-200">
+                        <tr className="bg-slate-500 text-white">
                             <th className="border border-gray-300 px-4 py-2">Photo</th>
                             <th className="border border-gray-300 px-4 py-2">Title</th>
                             <th className="border border-gray-300 px-4 py-2">Type</th>

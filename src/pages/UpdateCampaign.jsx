@@ -108,7 +108,7 @@ const UpdateCampaign = () => {
                     
                 </div>
                 <div className="p-5">
-                    <input type="submit"  value='Update Campaign' className="btn btn-block bg-emerald-600 text-white font-bold mb-4"/>
+                    <input type="submit"  value='Update Campaign' className="btn btn-block bg-teal-600 text-white font-bold mb-4"/>
                 </div>
             </form>
         </div>

@@ -4,14 +4,19 @@ import { useState } from "react";
 const AllCampaign = () => {
     const loadCampaigns = useLoaderData();
     const [campaigns, setCampaigns] = useState(loadCampaigns);
+    const handleSortByPrice = () => {
+        const sortedCampaigns = [...campaigns].sort((a, b) => b.amount - a.amount);
+        setCampaigns(sortedCampaigns);
+    };
 
     return (
         <div className="mb-10">
-            <h3 className="text-2xl text-center font-bold py-2 mb-4">All Campaigns</h3>
+            <h3 className="text-2xl text-center font-bold py-2 ">All Campaigns</h3>
+            <button  onClick={handleSortByPrice} className="btn bg-teal-600 text-white mb-2 font-bold">Sort By Price</button>
             <div className="overflow-x-auto">
                 <table className="table-auto w-full border-collapse border border-gray-300">
                     <thead>
-                        <tr className="bg-gray-200">
+                        <tr className="bg-slate-500 text-white">
                             <th className="border border-gray-300 px-4 py-2">Campaign Title</th>
                             <th className="border border-gray-300 px-4 py-2">Campaign Type</th>
                             <th className="border border-gray-300 px-4 py-2">Donation Amount</th>

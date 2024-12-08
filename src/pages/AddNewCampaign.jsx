@@ -45,7 +45,7 @@ const AddNewCampaign = () => {
 
     }
     return (
-        <div className='bg-[#d9edea] m-5 rounded-lg'>
+        <div className='bg-slate-500 m-5 rounded-lg '>
            <h3 className="text-2xl text-center font-bold py-2">Add New Campaign</h3>
             <form onSubmit={handleAddCampaign}>
                 <div>
