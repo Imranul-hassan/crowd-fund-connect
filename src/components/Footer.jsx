@@ -10,7 +10,7 @@ const Footer = () => {
                     <NavLink to="/"><p className="link link-hover">Home</p></NavLink>
                     <Link to="/"> <p className="link link-hover">About us</p></Link>
                     <NavLink to="/add-new-campaign"><a className="link link-hover">Add new campaign</a></NavLink>
-                    <NavLink to="/all-campaign"> <p className="link link-hover">All Campaign</p></NavLink>  
+                    <NavLink to="/all-campaign"> <p className="link link-hover">All Campaigns</p></NavLink>  
                 </nav>
                 <nav>
                     <div className="grid grid-flow-col gap-x-4 gap-y-2">

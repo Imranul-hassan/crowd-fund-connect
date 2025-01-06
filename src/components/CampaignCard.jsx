@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
+import { FaHandHoldingDollar } from "react-icons/fa6";
 
-const CampaignCard = ({campaign}) => {
-    
+const CampaignCard = ({ campaign }) => {
+
     const { photo, campaign_title, campaign_type, description, amount, deadline } = campaign;
 
     return (
@@ -13,13 +14,14 @@ const CampaignCard = ({campaign}) => {
                 <div className="card-body p-6">
                     <h2 className="card-title text-lg font-semibold text-gray-800">{campaign_title}</h2>
                     <p className="text-sm text-gray-500 mt-1 ">{campaign_type}</p>
-                    <p className="text-sm font-semibold text-gray-700">
-                        <span className="font-bold">Amount:</span> ${amount}
-                    </p>
+                    <div className="flex gap-2 text-md font-semibold text-gray-700">
+                        <span className="text-xl font-bold"><FaHandHoldingDollar /> </span>
+                        <p>${amount}</p>
+                    </div>
                     <p className="text-sm font-semibold text-gray-700">
                         <span className="font-bold">Deadline:</span> {new Date(deadline).toLocaleDateString()}
                     </p>
-                   
+
                     <div className="card-actions mt-3 ">
                         <Link to={`campaign-details/${campaign._id}`}>
                             <button className="text-base btn text-white bg-teal-800 hover:bg-teal-600 rounded-full py-1 px-16">

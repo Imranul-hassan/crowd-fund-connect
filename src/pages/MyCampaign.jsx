@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { MdDeleteForever } from "react-icons/md";
+import { MdBrowserUpdated } from "react-icons/md";
 import { AuthContext } from "../provider/AuthProvider";
 
 const MyCampaign = () => {
@@ -47,7 +49,7 @@ const MyCampaign = () => {
             <div className="overflow-x-auto">
                 <table className="table-auto w-full border-collapse border border-gray-300">
                     <thead>
-                        <tr className="bg-slate-500 text-white">
+                        <tr className="bg-slate-100 text-black">
                             <th className="border border-gray-300 px-3 py-2">Serial</th>
                             <th className="border border-gray-300 px-3 py-2">Photo</th>
                             <th className="border border-gray-300 px-3 py-2">Title</th>
@@ -57,7 +59,7 @@ const MyCampaign = () => {
                             <th className="border border-gray-300 px-3 py-2">Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="bg-slate-50">
                         {
                             campaigns.map((campaign, index) => (
                                 <tr key={campaign._id}>
@@ -73,15 +75,15 @@ const MyCampaign = () => {
                                     <td className="border border-gray-300 px-3 py-2">{campaign.campaign_type}</td>
                                     <td className="border border-gray-300 px-3 py-2 text-center">${campaign.amount}</td>
                                     <td className="border border-gray-300 px-3 py-2">{campaign.deadline}</td>
-                                    <td className="border border-gray-300 px-3 py-2">
+                                    <td className="border border-gray-300 px-3 py-2 text-center">
                                         <Link to={`/my-campaign/${user?.email}/update-campaign/${campaign._id}`}>
-                                            <button className="btn btn-sm bg-teal-600 text-white hover:bg-teal-600 rounded-md">
-                                                Update
+                                            <button className="btn btn-sm text-xl bg-teal-600 text-white hover:bg-teal-600 rounded-md">
+                                            <MdBrowserUpdated />
                                             </button>
                                         </Link>
                                         <button onClick={()=> handleDelete(campaign._id)}
-                                        className="btn btn-sm bg-red-500 text-white hover:bg-red-600 rounded-md">
-                                            Delete
+                                        className="btn btn-sm text-xl bg-red-500 ml-2 text-white hover:bg-red-600 rounded-md">
+                                          <MdDeleteForever />
                                         </button>
                                     </td>
                                 </tr>

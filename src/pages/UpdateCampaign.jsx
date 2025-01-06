@@ -68,9 +68,9 @@ const UpdateCampaign = () => {
 
                     <div className="md:flex gap-3 p-5">
                         <div className="md:w-1/2">
-                        <label className='font-bold text-black'>Campaign title</label>
+                        <label className='font-bold text-black' required>Campaign title</label>
                             <select name="campaign_type" className="input input-bordered w-full bg-slate-200 text-black">
-                                <option value="" disabled selected>
+                                <option value="" disabled selected >
                                 Select Campaign Type
                                 </option>
                                 <option value="personal">Personal Issue</option>
@@ -108,7 +108,7 @@ const UpdateCampaign = () => {
                     
                 </div>
                 <div className="p-5">
-                    <input type="submit"  value='Update Campaign' className="btn btn-block bg-teal-600 text-white font-bold mb-4"/>
+                    <input type="submit"  value='Update Campaign' className="btn btn-block bg-teal-600 hover:bg-teal-500 text-white font-bold mb-4"/>
                 </div>
             </form>
         </div>

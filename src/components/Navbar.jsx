@@ -42,14 +42,14 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
               user?.email ?
                 (<div className="space-x-6">
                   <NavLink to="/">Home</NavLink>
-                  <NavLink to="/all-campaign">All Campaign</NavLink>
+                  <NavLink to="/all-campaign">All Campaigns</NavLink>
                   <NavLink to="/add-new-campaign">Add New Campaign</NavLink>
-                  <NavLink to={`/my-campaign/${user?.email}`} >My Campaign</NavLink>
+                  <NavLink to={`/my-campaign/${user?.email}`} >My Campaigns</NavLink>
                   <NavLink to={`/my-donation/${user?.email}`}>My Donations</NavLink>
                 </div>) :
                 (<div className="space-x-6">
                   <NavLink to="/">Home</NavLink>
-                  <NavLink to="/all-campaign">All Campaign</NavLink>
+                  <NavLink to="/all-campaign">All Campaigns</NavLink>
                   <a href="#about">About</a>
                   <a href="#faq">FAQ</a>
                 </div>)
