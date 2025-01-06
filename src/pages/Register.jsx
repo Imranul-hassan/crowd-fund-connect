@@ -59,7 +59,7 @@ const Register = () => {
     }
     return (
         <div>
-            <div className=" flex justify-center items-center my-10">
+            <div className=" w-10/12 mx-auto flex justify-center items-center my-10">
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <h2 className=" font-semibold text-2xl text-center mt-2 text-slate-700 ">Register your account</h2>
                     <form onSubmit={handleSubmit} className="card-body relative">

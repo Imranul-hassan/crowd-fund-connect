@@ -42,7 +42,7 @@ const MyCampaign = () => {
           });
     }
     return (
-        <div className="mb-10">
+        <div className=" w-10/12 mx-auto mb-10">
             <h2 className="text-2xl font-bold text-center p-5">My Campaigns</h2>
             <div className="overflow-x-auto">
                 <table className="table-auto w-full border-collapse border border-gray-300">

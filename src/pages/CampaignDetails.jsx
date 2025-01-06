@@ -44,7 +44,7 @@ const CampaignDetails = () => {
             })
     }
     return (
-        <div className="flex justify-center items-center  my-10 ">
+        <div className=" w-10/12 mx-auto flex justify-center items-center  my-10 ">
             <div className="card bg-white shadow-xl rounded-lg fl md:flex flex md:flex-row flex-col mb-8">
                 <div className="md:w-1/2">
                     <figure className="w-full h-full p-4">

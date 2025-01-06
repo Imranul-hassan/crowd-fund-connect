@@ -4,7 +4,7 @@ import DonationCard from "../components/DonationCard";
 const MyDonation = () => {
     const donations = useLoaderData();
     return (
-        <div className="mb-6">
+        <div className=" w-10/12 mx-auto mb-6">
 
             <h1 className="text-2xl font-bold text-center py-4">My Donations</h1>
 

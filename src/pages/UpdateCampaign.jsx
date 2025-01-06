@@ -51,7 +51,7 @@ const UpdateCampaign = () => {
     }
 
     return (
-        <div className='bg-slate-600 mt-5  mb-10 rounded-lg'>
+        <div className='bg-slate-600  w-10/12 mx-auto mt-5  mb-10 rounded-lg'>
            <h3 className="text-3xl text-center font-bold py-2 text-white">Update Campaign: {campaign_title}</h3>
             <form onSubmit={handleUpdateCampaign}>
                 <div>

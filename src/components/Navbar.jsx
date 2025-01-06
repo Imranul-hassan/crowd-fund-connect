@@ -7,7 +7,6 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
 
 
   return (
-    <div className="sticky  top-0 z-50">
       <div className="navbar md:w-11/12 mx-auto text-white">
         <div className="navbar-start">
           <div className="dropdown">
@@ -98,7 +97,6 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
 
         </div>
       </div>
-    </div>
   );
 };
 

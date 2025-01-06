@@ -10,7 +10,7 @@ const AllCampaign = () => {
     };
 
     return (
-        <div className="mb-10">
+        <div className="mb-10 w-10/12 mx-auto">
             <h3 className="text-2xl text-center font-bold py-2 ">All Campaigns</h3>
             <button onClick={handleSortByPrice} className="btn bg-teal-700 text-white mb-2 font-bold">Sort By Price</button>
             <div className="overflow-x-auto">

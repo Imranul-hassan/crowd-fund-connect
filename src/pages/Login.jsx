@@ -35,7 +35,7 @@ const Login = () => {
 
     return (
         <div className="">
-            <div className="py-10 flex justify-center items-center">
+            <div className=" w-10/12 mx-auto py-10 flex justify-center items-center">
                 <div className="card bg-base-100 w-full max-w-sm shrink-0">
                     <h2 className=" font-semibold text-2xl text-center mt-2 text-slate-700">Login your account</h2>
 

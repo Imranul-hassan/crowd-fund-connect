@@ -35,7 +35,7 @@ const HomeLayout = () => {
             <h2>
                 {loading ? <span className="loading loading-bars loading-lg"></span> : ''}
             </h2>
-            <main className="min-h-[calc(100vh-290px)] w-10/12 mx-auto">
+            <main className="min-h-[calc(100vh-290px)]">
                 <Outlet></Outlet>
             </main>
             <footer>
