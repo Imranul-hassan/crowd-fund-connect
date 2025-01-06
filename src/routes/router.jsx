@@ -46,9 +46,7 @@ import UpdateCampaign from "../pages/UpdateCampaign";
         },
         {
           path: 'campaign-details/:id',
-          element: <PrivateRoute>
-                       <CampaignDetails></CampaignDetails>
-                  </PrivateRoute>,
+          element: <CampaignDetails></CampaignDetails>,
           loader: ({params}) => fetch(`https://crowd-funding-server-rho.vercel.app/campaign/${params.id}`)
         
         },

@@ -65,10 +65,10 @@ const CampaignDetails = () => {
                     </p>
 
                     <p className="text-gray-700">
-                        <span className="font-bold ">Donor Name:</span> {user.displayName}
+                        <span className="font-bold ">Donor Name:</span> {user?.displayName}
                     </p>
                     <p className="text-gray-700">
-                        <span className="font-bold">Donor Contact:</span> {user.email}
+                        <span className="font-bold">Donor Contact:</span> {user?.email}
                     </p>
 
                     <div className="card-actions mt-6">
