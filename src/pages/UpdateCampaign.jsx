@@ -7,7 +7,7 @@ import { AuthContext } from "../provider/AuthProvider";
 const UpdateCampaign = () => {
     const updateCampaign = useLoaderData()
     const {_id, photo, campaign_title, campaign_type, description, amount, deadline, user_email, user_name } = updateCampaign
-
+    console.log(updateCampaign)
     const {user} = useContext(AuthContext);
 
     const handleUpdateCampaign = event =>{
@@ -24,7 +24,7 @@ const UpdateCampaign = () => {
         const user_name = form.user_name.value;
        
 
-        const updateCampaign = {photo, campaign_title, campaign_type, description, amount, deadline,user_email, user_name}
+        const updateCampaign = {photo, campaign_title, campaign_type, description, amount, deadline, user_email, user_name}
         console.log(updateCampaign)
 
         fetch(`https://crowd-funding-server-rho.vercel.app/campaign/${_id}`,{
@@ -69,7 +69,7 @@ const UpdateCampaign = () => {
                     <div className="md:flex gap-3 p-5">
                         <div className="md:w-1/2">
                         <label className='font-bold text-white'>Campaign title</label>
-                            <select name="campaign_type text-white" className="input input-bordered w-full bg-slate-400">
+                            <select name="campaign_type" className="input input-bordered w-full bg-slate-400">
                                 <option value="" disabled selected>
                                 Select Campaign Type
                                 </option>

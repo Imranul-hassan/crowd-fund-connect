@@ -4,7 +4,7 @@ import startup from "../assets/startup.jpg"
 const About = () => {
 
     return (
-        <div className="my-10 ">
+        <div className="my-10 " id="about">
             <div className=" pr-4">
                 <div className="w-9/12 mx-auto text-center ">
                     <h3 className="font-bold text-xl">About Us</h3>

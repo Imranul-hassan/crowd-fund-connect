@@ -27,15 +27,15 @@ const HomeLayout = () => {
     const { loading } = useContext(AuthContext)
 
     return (
-        <div className={`min-h-screen ${isDarkMode ? "bg-gray-900 text-white" : "bg-[#E6F7F5] text-black"}`}>
+        <div className={`${isDarkMode ? "bg-gray-900 text-white" : "bg-[#E6F7F5] text-black"}`}>
             <ToastContainer />
-            <nav className="bg-[#0f4f47]">
+            <nav className="bg-[#0f4f47] sticky top-0 z-50">
                 <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} handleCheckboxChange={handleCheckboxChange}></Navbar>
             </nav>
             <h2>
                 {loading ? <span className="loading loading-bars loading-lg"></span> : ''}
             </h2>
-            <main className="min-h-[calc(100vh-240px)] w-10/12 mx-auto">
+            <main className="min-h-[calc(100vh-290px)] w-10/12 mx-auto">
                 <Outlet></Outlet>
             </main>
             <footer>
