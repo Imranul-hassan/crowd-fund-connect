@@ -40,7 +40,7 @@ const Home = () => {
                     </h1>
                     <p className="text-center mx-auto mt-3 text-xl md:w-5/12 ">Explore ongoing campaigns that need your support. Every contribution makes a difference—join the movement today!</p>
                 </div>
-                <div className="grid md:grid-cols-3 gap-4">
+                <div className="grid md:grid-cols-4 gap-3">
                     {
 
                         campaigns.map(campaign => <CampaignCard key={campaign._id} campaign={campaign}>

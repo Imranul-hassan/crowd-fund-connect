@@ -45,25 +45,25 @@ const AddNewCampaign = () => {
 
     }
     return (
-        <div className='bg-slate-700  w-10/12 mx-auto m-5 rounded-lg'>
-           <h3 className="text-2xl text-center font-bold py-2 text-white">Add New Campaign</h3>
+        <div className='bg-white text-black  w-10/12 mx-auto m-5 rounded-lg'>
+           <h3 className="text-2xl text-center font-bold py-2 text-black">Add New Campaign</h3>
             <form onSubmit={handleAddCampaign}>
                 <div>
                     <div className="md:flex gap-3 p-5">
                         <div className="md:w-1/2 ">
-                            <label className='font-bold text-white'>Photo URL</label>
-                            <input type="text" placeholder="Photo URL" name="photo" className="input input-bordered w-full bg-slate-400 " required />
+                            <label className='font-bold text-black'>Photo URL</label>
+                            <input type="text" placeholder="Photo URL" name="photo" className="input input-bordered w-full bg-slate-100 " required />
                         </div>
                         <div className="md:w-1/2">
-                        <label className='font-bold text-white'>Campaign title</label>
-                            <input  type="text" placeholder="Campaign title" name="campaign_title" className="input input-bordered w-full bg-slate-400" required  />
+                        <label className='font-bold text-black'>Campaign title</label>
+                            <input  type="text" placeholder="Campaign title" name="campaign_title" className="input input-bordered w-full bg-slate-100" required  />
                         </div>
                     </div>
 
                     <div className="md:flex gap-3 p-5">
                         <div className="md:w-1/2">
-                        <label className='font-bold text-white'>Campaign title</label>
-                            <select name="campaign_type" className="input input-bordered w-full bg-slate-400" required >
+                        <label className='font-bold text-black'>Campaign type</label>
+                            <select name="campaign_type" className="input input-bordered w-full bg-slate-100" required >
                                 <option value="" disabled selected>
                                 Select Campaign Type
                                 </option>
@@ -74,29 +74,29 @@ const AddNewCampaign = () => {
                             </select>
                         </div>
                         <div  className="md:w-1/2">
-                             <label className='font-bold text-white'>Description</label>
-                            <input type="text" placeholder="Description" name="description" className="input input-bordered w-full bg-slate-400" required  />
+                             <label className='font-bold text-black'>Description</label>
+                            <input type="text" placeholder="Description" name="description" className="input input-bordered w-full bg-slate-100" required  />
                         </div>
                     </div>
                     <div className="md:flex gap-3 p-5">
                         <div  className="md:w-1/2">
-                            <label className='font-bold text-white'>Minimum donation amount</label>
-                            <input type="number" placeholder="Minimum donation amount" name="amount" className="input input-bordered w-full bg-slate-400 " required  />
+                            <label className='font-bold text-black'>Minimum donation amount</label>
+                            <input type="number" placeholder="Minimum donation amount" name="amount" className="input input-bordered w-full bg-slate-100 " required  />
                         </div>
                         <div  className="md:w-1/2">
-                            <label className='font-bold text-white'>Deadline</label>
-                            <input type="date" placeholder="Deadline" name="deadline" className="input input-bordered w-full bg-slate-400 " required />
+                            <label className='font-bold text-black'>Deadline</label>
+                            <input type="date" placeholder="Deadline" name="deadline" className="input input-bordered w-full bg-slate-100 " required />
                         </div>
                     </div>
 
                     <div className="md:flex gap-3 p-5">
                         <div className="md:w-1/2">
-                            <label className='font-bold text-white'>User Email </label>
-                            <input type="text" value={user.email} name="user_email" className="input input-bordered w-full bg-slate-400 " />
+                            <label className='font-bold text-black'>User Email </label>
+                            <input type="text" value={user.email} name="user_email" className="input input-bordered w-full bg-slate-100 " />
                         </div>
                         <div className="md:w-1/2">
-                        <label className='font-bold text-white'> User Name</label>
-                            <input type="text" value={user.displayName} name="user_name" className="input input-bordered w-full bg-slate-400 " />
+                        <label className='font-bold text-black'> User Name</label>
+                            <input type="text" value={user.displayName} name="user_name" className="input input-bordered w-full bg-slate-100 " />
                         </div>
                     </div>
                     
