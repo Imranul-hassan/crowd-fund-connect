@@ -19,7 +19,7 @@ const MyDonation = () => {
                             
                         </tr>
                     </thead>
-                    <tbody className="bg-white">
+                    <tbody className="bg-white text-black">
                         {
                             donations.map((donation, index) => (
                                 <tr key={donation._id}>

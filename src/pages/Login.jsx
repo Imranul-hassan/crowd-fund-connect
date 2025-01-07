@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/google.png";
+import login from "../assets/login.png";
 
 
 
@@ -34,11 +35,13 @@ const Login = () => {
     }
 
     return (
-        <div className="">
-            <div className=" w-10/12 mx-auto py-10 flex justify-center items-center">
+        <div className="w-10/12 mx-auto py-5 flex">
+            <div className="hidden bg-cover bg-center md:block  lg:block w-1/2 ">
+                <img className="md:h-full" src={login} alt="login" />
+            </div>
+            <div className="md:w-1/2 w-full flex justify-center items-center">
                 <div className="card bg-base-100 w-full max-w-sm shrink-0">
                     <h2 className=" font-semibold text-2xl text-center mt-2 text-slate-700">Login your account</h2>
-
                     <form onSubmit={handleSubmit} className="card-body pt-3 ">
                         <div className="form-control">
                             <label className="label">

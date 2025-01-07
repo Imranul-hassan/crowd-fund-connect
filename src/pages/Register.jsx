@@ -6,6 +6,7 @@ import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import logo from "../assets/google.png"
 import Swal from "sweetalert2";
+import register from "../assets/signup.png"
 
 const Register = () => {
     const { handleRegister, manageProfile, handleGoogleLogin } = useContext(AuthContext);
@@ -58,8 +59,11 @@ const Register = () => {
 
     }
     return (
-        <div>
-            <div className=" w-10/12 mx-auto flex justify-center items-center my-10">
+        <div className=" w-10/12 mx-auto flex">
+            <div className="w-1/2 hidden md:block">
+                <img className="h-full pb-5" src={register} alt="" />
+            </div>
+            <div className="md:w-1/2 w-full  flex justify-center items-center my-10">
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <h2 className=" font-semibold text-2xl text-center mt-2 text-slate-700 ">Register your account</h2>
                     <form onSubmit={handleSubmit} className="card-body relative">

@@ -50,7 +50,7 @@ const MyCampaign = () => {
                 <table className="table-auto w-full border-collapse border border-gray-300">
                     <thead>
                         <tr className="bg-slate-100 text-black">
-                            <th className="border border-gray-300 px-3 py-2">Serial</th>
+                            <th className="border border-gray-300 px-3 py-2">#</th>
                             <th className="border border-gray-300 px-3 py-2">Photo</th>
                             <th className="border border-gray-300 px-3 py-2">Title</th>
                             <th className="border border-gray-300 px-3 py-2">Type</th>
@@ -59,7 +59,7 @@ const MyCampaign = () => {
                             <th className="border border-gray-300 px-3 py-2">Actions</th>
                         </tr>
                     </thead>
-                    <tbody className="bg-slate-50">
+                    <tbody className="bg-slate-50 text-black">
                         {
                             campaigns.map((campaign, index) => (
                                 <tr key={campaign._id}>

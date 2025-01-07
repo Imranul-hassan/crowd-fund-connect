@@ -50,8 +50,7 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
                 (<div className="space-x-6">
                   <NavLink to="/">Home</NavLink>
                   <NavLink to="/all-campaign">All Campaigns</NavLink>
-                  <a href="#about">About</a>
-                  <a href="#faq">FAQ</a>
+                  <NavLink to="/#about">About</NavLink>
                 </div>)
             }
           </ul>
